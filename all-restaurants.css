@@ -1,0 +1,212 @@
+/* All Restaurants Page Styles */
+
+.restaurants-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: white;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.zafraan-logo img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.restaurants-left {
+    flex: 1;
+    max-width: 500px;
+}
+
+.restaurants-right {
+    flex: 1;
+    max-width: 500px;
+}
+
+/* Filter Section */
+.filter-section {
+    margin-bottom: 30px;
+}
+
+.filter-section label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.restaurant-dropdown {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.restaurant-dropdown:focus {
+    outline: none;
+    border-color: #e67e22;
+}
+
+/* Restaurant Cards */
+.restaurants-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.restaurant-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.restaurant-card:hover {
+    border-color: #e67e22;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.restaurant-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+}
+
+.restaurant-address {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.restaurant-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #666;
+}
+
+.restaurant-icons i {
+    font-size: 18px;
+}
+
+.restaurant-icons .fa-bicycle,
+.restaurant-icons .fa-person-walking {
+    color: #e67e22;
+}
+
+.restaurant-icons .fa-chevron-right {
+    color: #999;
+    font-size: 16px;
+}
+
+/* Food Image */
+.food-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .main-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .restaurants-left,
+    .restaurants-right {
+        max-width: 100%;
+    }
+    
+    .food-image {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .restaurants-container {
+        padding: 20px 15px;
+    }
+    
+    .welcome-section h1 {
+        font-size: 24px;
+    }
+    
+    .restaurant-card {
+        padding: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .restaurant-icons {
+        align-self: flex-end;
+    }
+    
+    .food-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-section h1 {
+        font-size: 20px;
+    }
+    
+    .restaurant-card {
+        padding: 12px;
+    }
+    
+    .restaurant-info h3 {
+        font-size: 16px;
+    }
+    
+    .restaurant-address {
+        font-size: 13px;
+    }
+}

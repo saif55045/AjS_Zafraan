@@ -1,0 +1,250 @@
+/*--------------------------------------------------------------
+# Restaurant Info Page Specific Styles
+--------------------------------------------------------------*/
+
+.restaurant-info-content {
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+
+.info-main-content {
+    background-color: var(--white-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.info-section {
+    padding: 25px;
+}
+
+.info-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Opening Hours Section */
+.hours-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.hours-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.hours-column h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    text-align: center;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hour-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.hour-item:last-child {
+    border-bottom: none;
+}
+
+.hour-item .day {
+    font-weight: 500;
+    color: var(--text-color);
+    min-width: 70px;
+    font-size: 0.9rem;
+}
+
+.hour-item .time {
+    color: var(--light-text-color);
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.address-box, .contact-box {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 18px;
+    transition: all 0.3s ease;
+}
+
+.address-box:hover, .contact-box:hover {
+    background-color: #f0f1f2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.address-item, .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.address-item i:first-child, .contact-item i:first-child {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    width: 18px;
+    text-align: center;
+}
+
+.address-item span, .contact-item span {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.address-item i:last-child, .contact-item i:last-child {
+    font-size: 0.9rem;
+    color: var(--light-text-color);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.address-item:hover i:last-child, .contact-item:hover i:last-child {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/*--------------------------------------------------------------
+# Responsive Design for Restaurant Info
+--------------------------------------------------------------*/
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hours-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .info-section {
+        padding: 30px 20px;
+    }
+    
+    .info-section h2 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+    
+    .restaurant-info-content {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+/* Mobile Portrait */
+@media (max-width: 576px) {
+    .info-section {
+        padding: 20px 15px;
+    }
+    
+    .info-section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+    
+    .hours-section h3, .contact-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    
+    .address-box, .contact-box {
+        padding: 20px 15px;
+    }
+    
+    .hour-item .day {
+        min-width: 70px;
+        font-size: 0.9rem;
+    }
+    
+    .hour-item .time {
+        font-size: 0.9rem;
+    }
+    
+    .address-item span, .contact-item span {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .info-section {
+        padding: 15px 10px;
+    }
+    
+    .info-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+    
+    .restaurant-info-content {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    
+    .address-box, .contact-box {
+        padding: 15px 12px;
+    }
+    
+    .hour-item {
+        padding: 6px 0;
+    }
+    
+    .hour-item .day {
+        min-width: 60px;
+        font-size: 0.85rem;
+    }
+    
+    .hour-item .time {
+        font-size: 0.85rem;
+    }
+}
